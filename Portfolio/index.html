@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Nishit Jain</title>
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
-  </head>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
 <body>
 
     <!-- Navbar / Taskbar -->
@@ -30,8 +35,8 @@
   <div class="hero-container">
     <!-- Left Half -->
     <div class="hero-left">
-      <p class="intro-text">WELCOME TO MY POARTFOLIO ✨</p>
-      <h1>Hi, I'm <span class="highlight-name">Nishit Jain</span></h1>
+      <p class="intro-text">WELCOME TO MY PORTFOLIO ✨</p>
+      <h1><span class="highlight-name">Hi, I'm Nishit Jain</span></h1>
       <h2 class="role-title">Full Stack Developer</h2>
       <p class="description">
         I’m passionate about building scalable, creative, and interactive digital 
@@ -40,36 +45,34 @@
         across web and desktop platforms.
       </p>
 
-      <!-- Buttons -->
-      <div class="button-group">
-        <a href="#projects" class="btn btn-outline">My Projects</a>
-        <a href="files/NishitJainCV.pdf" class="btn btn-filled" target="_blank">
-          <i class="fas fa-download"></i> Download CV
-        </a>
+        <!-- Buttons -->
+        <div class="button-group">
+          <a href="#projects" class="btn btn-outline">My Projects</a>
+          <a href="files/NishitJainCV.pdf" class="btn btn-filled" target="_blank">
+            <i class="fas fa-download"></i> Download CV
+          </a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/nishitjain024/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Nishit240" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
       </div>
 
-      <!-- Social Icons -->
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/nishitjain024/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/Nishit240" target="_blank"><i class="fab fa-github"></i></a>
-      </div>
-    </div>
-
-    <!-- Right Half -->
-    <div class="hero-right">
-      <div class="illustration-wrapper">
-        <img src="image/myphoto.png" alt="Nishit Jain Illustration" class="hero-illustration">
+      <!-- Right Half -->
+      <div class="hero-right">
+        <div class="illustration-wrapper hero-img-container">
+          <img src="image/myphoto.png" alt="Nishit Jain Illustration" class="hero-illustration">
+          <div class="glow"></div>
+        </div>
         <div class="abstract-shapes"></div>
       </div>
     </div>
+
+    <!-- Scroll Down Arrow -->
+    <button class="down-arrow">&#9660;</button>
   </div>
-
-  <!-- Scroll Down Arrow -->
-  <div class="scroll-down">
-  <i class="fas fa-chevron-down"></i>
-  </div>
-
-
 </section>
 
 <!-- About Me Section -->
@@ -89,7 +92,7 @@
       <h2 class="about-heading">About Me</h2>
 
       <p class="about-text">
-        Welcome to my portfolio! I'm <span class="highlight">Nishit Jain</span>, a Computer Science and Engineering student at 
+        <span style="-delay: Os;">Welcome to my portfolio! I'm Nishit Jain</span>, a Computer Science and Engineering student at 
         Acropolis Institute of Technology and Research, Indore. With hands-on experience in full-stack development, data 
         visualization, and AI-driven applications, I am passionate about creating impactful software solutions.
       </p>
@@ -101,84 +104,98 @@
       </p>
 
       <p class="about-text with-icon">
-        <span class="about-icon">★</span> I am deeply committed to continuous learning, with achievements including NPTEL Elite Rank in DBMS, 
+        <span class="about-icon">🌟</span> I am deeply committed to continuous learning, with achievements including NPTEL Elite Rank in DBMS, 
         certifications from Deloitte, Cisco, and Google Developer Group, and experience in mentoring through workshops.
       </p>
 
       <!-- Skills Section -->
-      <h3 class="Hobbie-heading">Hobbies</h3>
+    <h3 class="Hobbie-heading">Hobbies</h3>
 <div class="Hobbie-icons">
   <div class="Hobbie-icon" style="background-color:#1e5165;">
     <img src="icons/coding.png" alt="Coding" class="hobbie-img">
+    <h1 class="hobby-text">
+      <span>C</span><span>o</span><span>d</span><span>i</span><span>n</span><span>g</span>
+    </h1>
   </div>
   <div class="Hobbie-icon" style="background-color:#E34F26;">
     <img src="icons/basketball-player.png" alt="Sports" class="hobbie-img">
+    <h1 class="hobby-text">
+      <span>V</span><span>o</span><span>l</span><span>l</span><span>e</span><span>y</span><span>b</span><span>a</span><span>l</span><span>l</span>
+    </h1>
   </div>
   <div class="Hobbie-icon" style="background-color:#1572B6;">
     <img src="icons/game-console.png" alt="Gaming" class="hobbie-img">
+    <h1 class="hobby-text">
+      <span>G</span><span>a</span><span>m</span><span>i</span><span>n</span><span>g</span>
+    </h1>
   </div>
   <div class="Hobbie-icon" style="background-color:#5C3EE8;">
     <img src="icons/watching-a-movie.png" alt="Movies" class="hobbie-img">
+    <h1 class="hobby-text">
+      <span>M</span><span>o</span><span>v</span><span>i</span><span>e</span><span>s</span>
+    </h1>
   </div>
   <div class="Hobbie-icon" style="background-color:#67C090;">
     <img src="icons/paint.png" alt="Art" class="hobbie-img">
+    <h1 class="hobby-text">
+      <span>A</span><span>r</span><span>t</span>
+    </h1>
   </div>
 </div>
 
     </div>
   </div>
-  
 </section>
 
 <!-- Services Section -->
 <section class="services-section" id="skills">
   <div class="services-header">
-    <h2 class="services-title">Skills</h2>
+    <h2 class="about-heading">My Skills</h2>
     <p class="services-subtitle">Transforming ideas into intuitive digital experiences</p>
   </div>
 
   <div class="services-carousel-wrapper">
     <!-- Prev button outside the glass box -->
-    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn prev">&#9664;</button>
 
-    <!-- Glass box containing all cards -->
-<div class="glass-box">
-  <div class="services-carousel">
-    <div class="service-card" style="background-color:#ffe055;">
-      <img src="icons/python.png" alt="Python" class="skill-icon">
+        <!-- Glass box containing all cards -->
+    <div class="glass-box">
+      <div class="services-carousel">
+        <div class="service-card" style="background-color:#ffe055;">
+          <img src="icons/python.png" alt="Python" class="skill-icon">
+        </div>
+        <div class="service-card" style="background-color:#fb8c6d;">
+          <img src="icons/html.png" alt="HTML" class="skill-icon">
+        </div>
+        <div class="service-card" style="background-color:#5e9bc8;">
+          <img src="icons/css.png" alt="CSS" class="skill-icon">
+        </div>
+        <div class="service-card" style="background-color:#dedbdb;">
+          <img src="icons/mysql.png" alt="SQL" class="skill-icon">
+        </div>
+        <div class="service-card" style="background-color:#ffe055;">
+          <img src="icons/power-bi.png" alt="Power BI" class="skill-icon">
+        </div>
+        <div class="service-card" style="background-color:#312f2f;">
+          <img src="icons/github.png" alt="GitHub" class="skill-icon">
+        </div>
+        <div class="service-card" style="background-color:#5e9bc8;">
+          <img src="icons/vs-code.png" alt="vs-code" class="skill-icon">
+        </div>
+        <div class="service-card" style="background-color:#6b57b3;">
+          <img src="icons/pandas.png" alt="Pandas" class="skill-icon">
+        </div>
+        <div class="service-card" style="background-color:#1b5265;">
+          <img src="icons/numpy.png" alt="Numpy" class="skill-icon">
+        </div>
+        <div class="service-card" style="background-color:#dedbdb;">
+          <img src="icons/opencv.png" alt="Opencv" class="skill-icon">
+        </div>
+      </div>
     </div>
-    <div class="service-card" style="background-color:#fb8c6d;">
-      <img src="icons/html.png" alt="HTML" class="skill-icon">
-    </div>
-    <div class="service-card" style="background-color:#5e9bc8;">
-      <img src="icons/css.png" alt="CSS" class="skill-icon">
-    </div>
-    <div class="service-card" style="background-color:#dedbdb;">
-      <img src="icons/mysql.png" alt="SQL" class="skill-icon">
-    </div>
-    <div class="service-card" style="background-color:#ffe055;">
-      <img src="icons/power-bi.png" alt="Power BI" class="skill-icon">
-    </div>
-    <div class="service-card" style="background-color:#312f2f;">
-      <img src="icons/github.png" alt="GitHub" class="skill-icon">
-    </div>
-    <div class="service-card" style="background-color:#5e9bc8;">
-      <img src="icons/vs-code.png" alt="vs-code" class="skill-icon">
-    </div>
-    <div class="service-card" style="background-color:#6b57b3;">
-      <img src="icons/pandas.png" alt="Pandas" class="skill-icon">
-    </div>
-    <div class="service-card" style="background-color:#1b5265;">
-      <img src="icons/numpy.png" alt="Numpy" class="skill-icon">
-    </div>
-    <div class="service-card" style="background-color:#dedbdb;">
-      <img src="icons/opencv.png" alt="Opencv" class="skill-icon">
-    </div>
-  </div>
-</div>
 
     <!-- Next button outside the glass box -->
-    <button class="carousel-btn next">&#10095;</button>
+    <button class="carousel-btn next">&#9654;</button>
   </div>
 
   <div class="services-pagination">
@@ -194,7 +211,9 @@
 
 <section class="projects-section" id="projects">
   <div class="projects-header">
-    <h2 class="projects-title">My Projects</h2>
+    <h2 class="about-heading">My Projects</h2>
+
+
     <p class="projects-subtitle">
       Discover the projects that showcase my passion for design and innovation
     </p>
@@ -205,7 +224,7 @@
     <!-- Project Card 1 -->
     <div class="project-card">
       <div class="project-img-area">
-        <img src="image/hj.png" alt="Amaksora App">
+        <img src="image/ft.png" alt="FaceTrack">
       </div>
       <div class="project-info-area">
         <h3 class="project-title">
@@ -224,7 +243,7 @@
     <!-- Project Card 2 -->
     <div class="project-card">
       <div class="project-img-area">
-        <img src="image/homy.png" alt="Homy App">
+        <img src="image/Sales Insights.png" alt="Sales Insights">
       </div>
       <div class="project-info-area">
         <h3 class="project-title">
@@ -243,7 +262,7 @@
     <!-- Project Card 3 -->
     <div class="project-card">
       <div class="project-img-area">
-        <img src="image/broll.png" alt="B-Roll Media">
+        <img src="image/alex.png" alt="ALEX">
       </div>
       <div class="project-info-area">
         <h3 class="project-title">
@@ -253,7 +272,7 @@
           </a>
         </h3>
         <p class="project-desc">
-           Python-based voice assistant that executes user commands through voice interaction. 
+           Alex is an intelligent Python voice assistant that interacts through voice commands and performs tasks to help users seamlessly. 
         </p>
         <p class="project-languages"><b>Languages :</b> Python, Speech Recognition, Pyttsx3</p>
       </div>
@@ -262,7 +281,7 @@
     <!-- Project Card 4 -->
     <div class="project-card">
       <div class="project-img-area">
-        <img src="image/project4.png" alt="Project 4">
+        <img src="image/vita.png" alt="VITA">
       </div>
       <div class="project-info-area">
         <h3 class="project-title">
@@ -271,15 +290,15 @@
             Github
           </a>
         </h3>
-        <p class="project-desc">Vita is a simple chatbot where users can interact with the bot, ask FAQs, and even solve math problems.</p>
-        <p class="project-languages">Languages : Python, Tkinter, ML</p>
+        <p class="project-desc">Vita is a simple chatbot, where users can interact with the bot, ask FAQs, and even solve math problems.</p>
+        <p class="project-languages"><b>Languages :</b> Python, Tkinter, ML</p>
       </div>
     </div>
 
     <!-- Project Card 5 -->
     <div class="project-card">
       <div class="project-img-area">
-        <img src="image/project5.png" alt="Project 5">
+        <img src="image/pf.png" alt="Portfolio">
       </div>
       <div class="project-info-area">
         <h3 class="project-title">
@@ -289,14 +308,14 @@
           </a>
         </h3>
         <p class="project-desc">Brief description of project 5.</p>
-        <p class="project-languages">Languages Used: HTML, CSS, JavaScript</p>
+        <p class="project-languages"><b>Languages :</b> HTML, CSS, JavaScript</p>
       </div>
     </div>
 
     <!-- Project Card 6 -->
     <div class="project-card">
       <div class="project-img-area">
-        <img src="image/project6.png" alt="Project 6">
+        <img src="image/pc.png" alt="Pulse Care">
       </div>
       <div class="project-info-area">
         <h3 class="project-title">
@@ -306,14 +325,14 @@
           </a>
         </h3>
         <p class="project-desc">Web platform for managing doctor appointments, prescriptions, and admin access. </p>
-        <p class="project-languages">HTML, CSS, JavaScript, MySQL, PHP</p>
+        <p class="project-languages"><b>Languages :</b> HTML, CSS, JavaScript, MySQL, PHP</p>
       </div>
     </div>
 
     <!-- Project Card 7 -->
     <div class="project-card">
       <div class="project-img-area">
-        <img src="image/project7.png" alt="Project 7">
+        <img src="image/project7.png" alt="The-Perfect-Guess ">
       </div>
       <div class="project-info-area">
         <h3 class="project-title">
@@ -339,15 +358,56 @@
             Github
           </a>
         </h3>
-        <p class="project-desc">Brief description of project 8.</p>
-        <p class="project-languages">Languages Used: HTML, CSS, JS</p>
+        <p class="project-desc">Brief description of project 8. Brief description of project 8. Brief description of project 8. Brief description of project 8.</p>
+        <p class="project-languages"><b>Languages :</b> HTML, CSS, JS</p>
       </div>
     </div>
   </div>
 </section>
 
+<section class="lets-work-section">
+
+  <!-- Top Bar -->
+  <div class="lets-top-bar", id="contact" >
+    <div class="avatar-text">
+      <img src="image/1.png" alt="User Avatar" class="avatar">
+      <h1 class="lets-heading">Let's work together..<br> </h1>
+    </div>
+
+  </div>
+
+  <!-- Main Content -->
+  <div class="lets-main-content">
+    <h1 class="lets-heading">
+      
+      <span class="arrow">&#8600;</span>
+    </h1>
+    <div class="separator">
+      <hr>
+      <span class="cta-text">Get in Touch</span>
+    </div>
+    <div class="contact-buttons">
+      <a href="mailto:anekantjainsagar@gmail.com" class="contact-btn">nishitjain02419@gmail.com</a>
+      <a href="tel:+917692045606" class="contact-btn">+91 78059 00204</a>
+    </div>
+  </div>
+
+  <!-- Footer Area -->
+  <div class="lets-footer">
+    <span class="copyright">Built by ©NishitJain</span>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/nishitjain024/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Nishit240" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/nishit.jain.56614/" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
+  </div>
+</section>
+
+
 <script src="js/script.js"></script>
 <script src="js/script1.js"></script>
+<script src="js/script2.js"></script>
 
 
 </body> 
