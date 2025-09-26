@@ -1,0 +1,200 @@
+
+
+/* About Section */
+.about-section {
+  min-height: 80vh;
+  background: #124170 url("image/bg-pattern.png") repeat;
+  background-size: contain;
+  padding: 5rem 1rem;
+  color: #DDF4E7;
+  background: linear-gradient(360deg, #124170, #67C090); 
+
+}
+
+.about-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Left column */
+.about-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image-wrapper {
+  position: relative;
+}
+
+.about-illustration {
+  width: 300px;
+  height: 300px;
+  border-radius: 76% 24% 87% 13% / 55% 73% 27% 45%;
+  border: 6px solid rgba(103, 192, 144, 0.8);
+  box-shadow: 0 8px 25px rgba(103, 192, 144, 0.5);
+  object-fit: contain;
+  z-index: 2;
+  position: relative;
+  transition: transform 2s ease, box-shadow 2s ease; /* Smooth transition */
+  
+}
+
+.about-illustration:hover {
+  box-shadow: 0 8px 25px rgba(103, 192, 144, 0.8);
+  transform: scale(1.4) rotate(360deg); /* Combine scale + rotation */
+}
+
+
+.about-abstract-shapes {
+  position: absolute;
+  top: -20px;
+  left: -30px;
+  /* width: 350px; */
+  height: 350px;
+  background: radial-gradient(circle at 30% 30%, #67C090, transparent 70%),
+              radial-gradient(circle at 70% 70%,#67C090, transparent 70%);
+  filter: blur(80px);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Right column */
+.about-right {
+  flex: 1.2;
+}
+
+.about-heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.about-text {
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  color: #e2e8f0;
+  
+}
+
+.about-text.with-icon {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.about-icon {
+  color: #67C090;
+  font-size: 1.4rem;
+}
+
+.Hobbie-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+}
+
+.Hobbie-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.Hobbie-icon {
+  width: 160px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.Hobbie-icon:hover {
+  transform: translateY(-10px);
+  filter: brightness(1.15);
+}
+
+.hobbie-img {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 5px;
+}
+
+.hobby-text {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #DDF4E7;
+  display: flex;
+  justify-content: center;
+}
+
+.hobby-text span {
+  position: relative;
+  display: inline-block;
+  animation: floatAnim 1s ease-in-out infinite alternate;
+  text-shadow: 0 1px 0 #b7b7b7, 0 2px 0 #b7b7b7,0 10px 10px rgba(0, 0, 0, 1);
+}
+
+/* Stagger animation delay for each letter */
+.hobby-text span:nth-child(1)  { animation-delay: 0.1s; }
+.hobby-text span:nth-child(2)  { animation-delay: 0.2s; }
+.hobby-text span:nth-child(3)  { animation-delay: 0.3s; }
+.hobby-text span:nth-child(4)  { animation-delay: 0.4s; }
+.hobby-text span:nth-child(5)  { animation-delay: 0.5s; }
+.hobby-text span:nth-child(6)  { animation-delay: 0.6s; }
+.hobby-text span:nth-child(7)  { animation-delay: 0.7s; }
+.hobby-text span:nth-child(8)  { animation-delay: 0.8s; }
+.hobby-text span:nth-child(9)  { animation-delay: 0.9s; }
+.hobby-text span:nth-child(10) { animation-delay: 1s; }
+
+
+@keyframes floatAnim {
+  0% { top: 0px; }
+  100% { top: -10px; }
+}
+
+
+/* Responsive */
+@media (max-width: 800px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-right {
+    margin-top: 2rem;
+  }
+}
+
+.about-text.with-icon {
+  display: inline-block;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+}
+
+/* Jelly keyframes */
+@keyframes jelly {
+  0%   { transform: scale(1,1); }
+  25%  { transform: scale(1.05,0.95); }
+  50%  { transform: scale(0.95,1.05); }
+  75%  { transform: scale(1.02,0.98); }
+  100% { transform: scale(1,1); }
+}
+
+/* Optional: repeat every few seconds */
+.about-text.with-icon:hover {
+  animation: jelly 1s ease forwards;
+}
+
+.about-text:hover {
+  animation: jelly 1s ease forwards;
+}

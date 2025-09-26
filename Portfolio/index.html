@@ -6,12 +6,12 @@
     
     <title>Nishit Jain</title>
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/skills.css">
-    <link rel="stylesheet" href="css/project.css">
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="index_css/style.css">
+    <link rel="stylesheet" href="index_css/home.css">
+    <link rel="stylesheet" href="index_css/about.css">
+    <link rel="stylesheet" href="index_css/skills.css">
+    <link rel="stylesheet" href="index_css/project.css">
+    <link rel="stylesheet" href="index_css/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
@@ -22,11 +22,11 @@
         <img src="image/bullet-point.png" class="menu-icon" alt="Menu">
 
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
@@ -47,11 +47,36 @@
 
         <!-- Buttons -->
         <div class="button-group">
-          <a href="#projects" class="btn btn-outline">My Projects</a>
-          <a href="files/NishitJainCV.pdf" class="btn btn-filled" target="_blank">
-            <i class="fas fa-download"></i> Download CV
+          <a href="#projects" class="btn btn-outline"> My Projects</a>
+
+          <!-- New Download Button -->
+          <a href="assets/Nishit_Jain_resume.pdf" download class="btn-4" data-tooltip="Size: 2MB">
+            <div class="button-wrapper">
+              <div class="text">Download CV</div>
+              <span class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  role="img"
+                  width="2em"
+                  height="2em"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
+                  ></path>
+                </svg>
+              </span>
+            </div>
           </a>
         </div>
+
 
         <!-- Social Icons -->
         <div class="social-icons">
@@ -92,7 +117,7 @@
       <h2 class="about-heading">About Me</h2>
 
       <p class="about-text">
-        <span style="-delay: Os;">Welcome to my portfolio! I'm Nishit Jain</span>, a Computer Science and Engineering student at 
+        <span style="-delay: 0s;">Welcome to my portfolio! I'm Nishit Jain</span>, a Computer Science and Engineering student at 
         Acropolis Institute of Technology and Research, Indore. With hands-on experience in full-stack development, data 
         visualization, and AI-driven applications, I am passionate about creating impactful software solutions.
       </p>
@@ -388,7 +413,6 @@
     </div>
     <div class="contact-buttons">
       <a href="mailto:anekantjainsagar@gmail.com" class="contact-btn">nishitjain02419@gmail.com</a>
-      <a href="tel:+917692045606" class="contact-btn">+91 78059 00204</a>
     </div>
   </div>
 

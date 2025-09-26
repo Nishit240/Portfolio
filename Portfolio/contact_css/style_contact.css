@@ -1,0 +1,254 @@
+/* ================= General ================= */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background: linear-gradient(180deg, #124170, #67C090);
+  color: #DDF4E7;
+}
+
+/* ================= Contact Section ================= */
+.contact-section {
+  padding: 130px 110px 30px 110px;
+  min-height: 89vh;
+  position: relative;
+}
+
+/* Header */
+.header h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #DDF4E7;
+  margin: 0;
+}
+
+.header hr {
+  margin: 10px 0 30px;
+  border: 1px solid #DDF4E7;
+}
+
+/* ================= Chat Container ================= */
+.chat-container {
+  max-width: 900px;
+  height: 500px; /* fixed height for desktop */
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 7px 7px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1); /* subtle transparency for mobile readability */
+}
+
+/* Top Bar */
+.chat-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #DDF4E7;
+  font-size: 0.9rem;
+}
+
+.email-pill {
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.social-icons i {
+  margin-left: 10px;
+  color: #333;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* Chat Messages */
+.chat-messages {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto;
+  background: rgba(240, 240, 240, 0.1);
+}
+
+/* Messages */
+.message {
+  padding: 12px 15px;
+  border-radius: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+.message-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.bot-row {
+  justify-content: flex-start;
+}
+
+.user-row {
+  justify-content: flex-end;
+}
+
+.avatar img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  font-size: 18px;
+  flex-shrink: 0;
+  margin: 0 10px;
+  margin-left: 0px;
+  margin-top: 5px;
+}
+
+.user-avatar {
+  margin-left: 10px;
+  margin-right: 0px;
+}
+
+.message.bot {
+  /* background-color: #67C090; */
+  color: #000000;
+  align-self: flex-start;
+  background: linear-gradient(180deg, #67C090, #437c5e);
+
+}
+
+.message.bot.action {
+  background: linear-gradient(180deg, #67C090, #67C090);
+  background-color: #67C090;
+  color: #000000;
+}
+
+.message.user {
+  background: linear-gradient(180deg, #124170, #1d77d0);
+  background-color: #26667F;
+  color: #DDF4E7;
+  align-self: flex-end;
+}
+
+/* ================= Input Area ================= */
+.chat-input {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  border-top: 1px solid #DDF4E7;
+  background: #DDF4E7;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+}
+
+.chat-input button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #67C090;
+  color: #DDF4E7;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.chat-input button:hover {
+  background: #1a452e;
+}
+
+/* ================= Scrollbar Styling ================= */
+.chat-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05);
+  border-radius: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+/* ================= Responsive ================= */
+@media screen and (max-width: 1024px) {
+  .contact-section {
+    padding: 120px 60px 40px 60px;
+  }
+  .header h1 {
+    font-size: 2.8rem;
+  }
+  .chat-container {
+    max-width: 700px;
+    height: 380px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-section {
+    padding: 100px 40px 40px 40px;
+  }
+  .header h1 {
+    font-size: 2.2rem;
+  }
+  .chat-container {
+    max-width: 100%;
+    height: 600px;
+  }
+  .chat-input input {
+    font-size: 0.9rem;
+  }
+  .chat-input button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-section {
+    padding: 80px 20px 40px 20px;
+  }
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  .chat-container {
+    height: 500px;
+  }
+  .chat-messages {
+    padding: 10px;
+    gap: 10px;
+  }
+  .avatar img {
+    width: 28px;
+    height: 28px;
+  }
+  .chat-input input {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+  .chat-input button {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+}

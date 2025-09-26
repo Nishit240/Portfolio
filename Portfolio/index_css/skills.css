@@ -1,0 +1,190 @@
+
+
+.services-section {
+  min-height: 50vh;
+  position: relative;
+  padding: 5rem 2rem;
+  background: #124170;
+  color: #DDF4E7;
+  overflow: hidden;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #DDF4E7;
+}
+
+.services-header p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  color: #DDF4E7;
+}
+
+/* Carousel wrapper */
+.services-carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 40px 0;
+}
+
+.glass-box {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  /* display: flex; */
+  overflow: hidden;
+  margin: 3%;
+  width: 70%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(103, 192, 144, 0.18);
+  height: 80px;       /* fixed height */
+  min-height: 200px;   /* ensures it won’t shrink too small */
+  max-height: 500px;   /* prevents it from growing too tall */
+  z-index: 1000;
+}
+
+.services-carousel {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.4s ease;
+}
+.service-card {
+  backdrop-filter: blur(15px);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  flex: 0 0 calc(25% - 0rem);
+  transition: transform 0.3s ease;
+  height: 60px;       
+  min-height: 200px;   
+  max-height: 700px;
+  text-align: center;
+  display: flex;             
+  align-items: center;   
+  justify-content: center;  
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  filter: brightness(1.15);
+}
+
+.skill-icon {
+  width: 80px;        
+  height: auto;       
+  object-fit: contain;
+}
+
+
+.carousel-btn {
+  background: #67C090;
+  border: none;
+  color: #DDF4E7;
+  padding: 15px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  transition: 0.3s;
+}
+
+.carousel-btn:hover {
+  background: #DDF4E7;
+  color: #1e5165;
+
+}
+
+
+/* Glass effect for pagination dots container */
+.services-pagination .dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  backdrop-filter: blur(15px);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Glass effect for individual pagination dot */
+.services-pagination .dots span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #DDF4E7;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.services-pagination .dots .active-dot {
+  width: 24px;
+  background: #67C090;
+  border-radius: 0.5rem;
+
+}
+
+/* Vertical nav */
+.services-vertical-nav {
+  position: absolute;
+  right: 1rem;
+  top: 6%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  animation: bounce 1.5s infinite;
+  cursor: pointer;
+  z-index: 999;  /* <- add this */
+}
+
+.services-vertical-nav button {
+  background: #1e5165;
+  color: #DDF4E7;
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  background: #67C090;
+}
+
+.services-vertical-nav button:hover {
+  background: #DDF4E7;
+  color: #1e5165;
+}
+
+/* Responsive Cards */
+@media (max-width: 1024px) {
+  .service-card {
+    flex: 0 0 calc(30.33% - 1px); /* 3 cards per row */
+  }
+}
+
+@media (max-width: 800px) {
+  .service-card {
+    flex: 0 0 calc(40% - 1px); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card {
+    flex: 0 0 100%; /* 1 card per row */
+  }
+
+  .carousel-btn.prev,
+  .carousel-btn.next {
+    display: none; /* hide buttons on small screens */
+  }
+}
+
+
