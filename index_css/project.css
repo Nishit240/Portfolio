@@ -1,0 +1,139 @@
+
+
+.projects-section {
+  padding: 3rem 2rem;
+  color: #DDF4E7;
+  text-align: center;
+  background: linear-gradient(360deg, #67C090, #124170);
+
+}
+
+.projects-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.projects-subtitle {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  color: #DDF4E7;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+.project-card {
+  width: 100%;
+  max-width: 880px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+  background: transparent;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  filter: brightness(1.15);
+}
+
+/* Upper image area */
+.project-img-area {
+  background: #124170;
+  padding: 1rem;
+}
+
+.project-img-area img {
+  width: 100%;
+  border-radius: 0.8rem;
+  object-fit: cover;
+}
+
+/* Lower info area */
+.project-info-area {
+  background: #124170;
+  padding: 1rem;
+  text-align: left;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.project-title {
+  color: #DDF4E7;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+.project-tag {
+  display: inline-block;
+  background: #67C090;  /* lighter purple */
+  color: #DDF4E7;
+  font-size: 1rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 1rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.project-tag:hover {
+  background: #DDF4E7;
+  color: #67C090;
+}
+
+
+.project-desc {
+  font-size: 0.9rem;
+  color: #eee;
+  margin-bottom: 0.5rem;
+}
+
+.project-languages {
+  font-size: 0.8rem;
+  color: #DDF4E7;
+}
+
+.projects-footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.see-all-btn {
+  background: #67C090;
+  color: #DDF4E7;
+  padding: 0.8rem 1.6rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.see-all-btn:hover {
+  background: #67C090;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
