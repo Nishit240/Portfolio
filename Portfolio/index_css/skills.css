@@ -36,7 +36,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  margin: 40px 90px;
+  margin: 20px;
 }
 
 /* Glass Box Scrollable */
@@ -48,7 +48,7 @@
   overflow-x: auto; /* horizontal scroll */
   scroll-behavior: smooth;
   display: flex;
-  width: 70%;
+  width: 1000px;
   margin: 0 auto;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(103, 192, 144, 0.18);
@@ -120,7 +120,7 @@
 /* ==========================
    Carousel Buttons
 ========================== */
-.carousel-btn {
+/* .carousel-btn {
   background: #67C090;
   border: none;
   color: #DDF4E7;
@@ -137,34 +137,6 @@
 .carousel-btn:hover {
   background: #DDF4E7;
   color: #1e5165;
-}
-
-/* ==========================
-   Pagination Dots
-========================== */
-/* .services-pagination .dots {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  backdrop-filter: blur(15px);
-  border-radius: 1rem;
-  padding: 0.5rem 1rem;
-}
-
-.services-pagination .dots span {
-  display: block;
-  width: 12px;
-  height: 12px;
-  background: #DDF4E7;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.services-pagination .dots .active-dot {
-  width: 24px;
-  background: #67C090;
-  border-radius: 0.5rem;
 } */
 
 /* ==========================
@@ -206,6 +178,9 @@
   .carousel-btn.next {
     display: none; /* hide buttons on small screens */
   }
+  .glass-box {
+    width: 1000px; /* expand since buttons are gone */
+  }
 }
 
 @media (max-width: 400px) {
@@ -222,17 +197,17 @@
   }
 
   .glass-box {
-    width: 90%;
-    min-height: 150px;
-    max-height: 350px;
+    width: 1095px;
+    min-height: 110px;
+    max-height: 18px;
     margin: 2% auto;
     padding: 15px;
   }
 
   .service-card {
     height: auto;
-    min-height: 150px;
-    max-height: 400px;
+    min-height: 100px;
+    max-height: 100px;
     padding: 1rem;
   }
 
