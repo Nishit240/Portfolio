@@ -1,14 +1,16 @@
-
-
+/* ==========================
+   Services Section
+========================== */
 .services-section {
   min-height: 50vh;
   position: relative;
-  padding: 5rem 2rem;
+  padding: 5rem 0.5rem;
   background: #124170;
   color: #DDF4E7;
   overflow: hidden;
 }
 
+/* Header */
 .services-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -26,51 +28,64 @@
   color: #DDF4E7;
 }
 
-/* Carousel wrapper */
+/* ==========================
+   Carousel Wrapper
+========================== */
 .services-carousel-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  margin: 40px 0;
+  margin: 40px 90px;
 }
 
+/* Glass Box Scrollable */
 .glass-box {
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 20px;
-  /* display: flex; */
-  overflow: hidden;
-  margin: 3%;
+  overflow-x: auto; /* horizontal scroll */
+  scroll-behavior: smooth;
+  display: flex;
   width: 70%;
+  margin: 0 auto;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(103, 192, 144, 0.18);
-  height: 80px;       /* fixed height */
-  min-height: 200px;   /* ensures it won’t shrink too small */
-  max-height: 500px;   /* prevents it from growing too tall */
+  min-height: 200px;
+  max-height: 500px;
   z-index: 1000;
+}
+
+/* Hide scrollbar for clean look */
+.glass-box::-webkit-scrollbar {
+  display: none;
 }
 
 .services-carousel {
   display: flex;
   gap: 20px;
-  transition: transform 0.4s ease;
 }
+
+/* ==========================
+   Service Card
+========================== */
 .service-card {
   backdrop-filter: blur(15px);
   border-radius: 1rem;
   padding: 2rem;
   box-sizing: border-box;
-  flex: 0 0 calc(25% - 0rem);
-  transition: transform 0.3s ease;
-  height: 60px;       
-  min-height: 200px;   
+  /* flex: 0 0 calc(25% - 0rem); */
+  transition: transform 0.3s ease, filter 0.3s ease;
+  height: 60px;
+  min-height: 200px;
   max-height: 700px;
   text-align: center;
-  display: flex;             
-  align-items: center;   
-  justify-content: center;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* for skill name tooltip */
+  cursor: pointer;
 }
 
 .service-card:hover {
@@ -78,13 +93,33 @@
   filter: brightness(1.15);
 }
 
+/* Skill Icon */
 .skill-icon {
-  width: 80px;        
-  height: auto;       
+  width: 80px;
+  height: auto;
   object-fit: contain;
 }
 
+/* Skill name on hover (desktop) or active (mobile) */
+.service-card::after {
+  content: attr(data-name);
+  position: absolute;
+  bottom: -25px;
+  font-size: 1rem;
+  color: #DDF4E7;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
+.service-card:hover::after,
+.service-card.active::after {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* ==========================
+   Carousel Buttons
+========================== */
 .carousel-btn {
   background: #67C090;
   border: none;
@@ -102,12 +137,12 @@
 .carousel-btn:hover {
   background: #DDF4E7;
   color: #1e5165;
-
 }
 
-
-/* Glass effect for pagination dots container */
-.services-pagination .dots {
+/* ==========================
+   Pagination Dots
+========================== */
+/* .services-pagination .dots {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
@@ -116,7 +151,6 @@
   padding: 0.5rem 1rem;
 }
 
-/* Glass effect for individual pagination dot */
 .services-pagination .dots span {
   display: block;
   width: 12px;
@@ -131,31 +165,31 @@
   width: 24px;
   background: #67C090;
   border-radius: 0.5rem;
+} */
 
-}
-
-/* Vertical nav */
+/* ==========================
+   Vertical Navigation
+========================== */
 .services-vertical-nav {
   position: absolute;
   right: 1rem;
-  top: 6%;
+  top: 11%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   animation: bounce 1.5s infinite;
   cursor: pointer;
-  z-index: 999;  /* <- add this */
+  z-index: 999;
 }
 
 .services-vertical-nav button {
-  background: #1e5165;
+  background: #67C090;
   color: #DDF4E7;
   border: none;
   border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem;
   cursor: pointer;
-  background: #67C090;
 }
 
 .services-vertical-nav button:hover {
@@ -163,28 +197,71 @@
   color: #1e5165;
 }
 
-/* Responsive Cards */
-@media (max-width: 1024px) {
-  .service-card {
-    flex: 0 0 calc(30.33% - 1px); /* 3 cards per row */
-  }
-}
+/* ==========================
+   Responsive Cards
+========================== */
 
-@media (max-width: 800px) {
-  .service-card {
-    flex: 0 0 calc(40% - 1px); /* 2 cards per row */
-  }
-}
-
-@media (max-width: 480px) {
-  .service-card {
-    flex: 0 0 100%; /* 1 card per row */
-  }
-
+@media (max-width: 880px) {
   .carousel-btn.prev,
   .carousel-btn.next {
     display: none; /* hide buttons on small screens */
   }
 }
 
+@media (max-width: 400px) {
+  .services-section {
+    padding: 3rem 1rem;
+  }
 
+  .services-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .services-header p {
+    font-size: 0.9rem;
+  }
+
+  .glass-box {
+    width: 90%;
+    min-height: 150px;
+    max-height: 350px;
+    margin: 2% auto;
+    padding: 15px;
+  }
+
+  .service-card {
+    height: auto;
+    min-height: 150px;
+    max-height: 400px;
+    padding: 1rem;
+  }
+
+  .skill-icon {
+    width: 50px;
+  }
+
+  .services-pagination .dots {
+    padding: 0.3rem 0.6rem;
+    gap: 0.3rem;
+  }
+
+  .services-pagination .dots span {
+    width: 10px;
+    height: 10px;
+  }
+
+  .services-pagination .dots .active-dot {
+    width: 18px;
+  }
+
+  .services-vertical-nav {
+    top: 2%;
+    right: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .services-vertical-nav button {
+    width: 2rem;
+    height: 2rem;
+  }
+}

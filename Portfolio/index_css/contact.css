@@ -3,7 +3,7 @@
 .lets-work-section {
   background: linear-gradient(360deg, #124170, #67C090);
   color: #DDF4E7;
-  padding: 4rem 5rem;
+  padding: 3rem 2rem;
 }
 
 /* Top bar with avatar and hamburger */
@@ -23,9 +23,9 @@
 
 .avatar {
   width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: #DDF4E7;
+  height: 100px;
+  /* border-radius: 50%;
+  background: #DDF4E7; */
   object-fit: cover;
 }
 

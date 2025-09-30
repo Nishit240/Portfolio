@@ -15,7 +15,7 @@ body {
 
 /* Header */
 .header h1 {
-  font-size: 3.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #DDF4E7;
   margin: 0;
@@ -29,7 +29,7 @@ body {
 /* ================= Chat Container ================= */
 .chat-container {
   max-width: 900px;
-  height: 500px; /* fixed height for desktop */
+  height: 480px; /* fixed height for desktop */
   margin: 0 auto;
   border-radius: 10px;
   box-shadow: 7px 7px rgba(0, 0, 0, 0.1);
@@ -112,13 +112,13 @@ body {
   height: 35px;
   font-size: 18px;
   flex-shrink: 0;
-  margin: 0 10px;
+  margin: 0 5px;
   margin-left: 0px;
   margin-top: 5px;
 }
 
 .user-avatar {
-  margin-left: 10px;
+  margin-left: 5px;
   margin-right: 0px;
 }
 
@@ -194,7 +194,7 @@ body {
 /* ================= Responsive ================= */
 @media screen and (max-width: 1024px) {
   .contact-section {
-    padding: 120px 60px 40px 60px;
+    padding: 90px 60px 40px 60px;
   }
   .header h1 {
     font-size: 2.8rem;
@@ -205,29 +205,9 @@ body {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 580px) {
   .contact-section {
-    padding: 100px 40px 40px 40px;
-  }
-  .header h1 {
-    font-size: 2.2rem;
-  }
-  .chat-container {
-    max-width: 100%;
-    height: 600px;
-  }
-  .chat-input input {
-    font-size: 0.9rem;
-  }
-  .chat-input button {
-    padding: 8px 15px;
-    font-size: 0.9rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .contact-section {
-    padding: 80px 20px 40px 20px;
+    padding: 120px 60px 40px 60px;
   }
   .header h1 {
     font-size: 1.8rem;

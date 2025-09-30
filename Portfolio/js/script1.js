@@ -1,53 +1,60 @@
 document.addEventListener('DOMContentLoaded', () => {
   const carousel = document.querySelector('.services-carousel');
-  const cards = document.querySelectorAll('.service-card');
+  const glassBox = document.querySelector('.glass-box');
   const prevBtn = document.querySelector('.carousel-btn.prev');
   const nextBtn = document.querySelector('.carousel-btn.next');
-  const dotsContainer = document.querySelector('.services-pagination .dots');
 
-  let currentIndex = 0;
-  const visibleCards = 4;
-  const totalCards = cards.length;
+  // Button scroll amount
+  const scrollAmount = 200; // adjust per card width
 
-  function createDots() {
-      dotsContainer.innerHTML = '';
-      const totalDots = Math.max(totalCards - visibleCards + 1, 1);
-      for (let i = 0; i < totalDots; i++) {
-          const dot = document.createElement('span');
-          if (i === 0) dot.classList.add('active-dot');
-          dot.addEventListener('click', () => goToIndex(i));
-          dotsContainer.appendChild(dot);
-      }
+  // Prev/Next Buttons
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', () => {
+      glassBox.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+      glassBox.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
   }
 
-  function updateCarousel() {
-      const style = window.getComputedStyle(cards[0]);
-      const gap = parseInt(style.marginRight) || 16; // fallback to 16px
-      const cardWidth = cards[0].offsetWidth + gap;
-      carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  // Drag/trackpad scroll
+  let isDown = false;
+  let startX;
+  let scrollLeft;
 
-      const dots = dotsContainer.querySelectorAll('span');
-      dots.forEach((dot, i) => dot.classList.toggle('active-dot', i === currentIndex));
-  }
+  glassBox.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - glassBox.offsetLeft;
+    scrollLeft = glassBox.scrollLeft;
+    glassBox.style.cursor = 'grabbing';
+  });
 
-  function prevCard() {
-      currentIndex = Math.max(currentIndex - 1, 0);
-      updateCarousel();
-  }
+  glassBox.addEventListener('mouseleave', () => {
+    isDown = false;
+    glassBox.style.cursor = 'grab';
+  });
+  glassBox.addEventListener('mouseup', () => {
+    isDown = false;
+    glassBox.style.cursor = 'grab';
+  });
+  glassBox.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - glassBox.offsetLeft;
+    const walk = (x - startX) * 2; // speed multiplier
+    glassBox.scrollLeft = scrollLeft - walk;
+  });
 
-  function nextCard() {
-      currentIndex = Math.min(currentIndex + 1, totalCards - visibleCards);
-      updateCarousel();
-  }
+  // Touch events for mobile
+  glassBox.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].pageX - glassBox.offsetLeft;
+    scrollLeft = glassBox.scrollLeft;
+  });
 
-  function goToIndex(index) {
-      currentIndex = index;
-      updateCarousel();
-  }
-
-  prevBtn.addEventListener('click', prevCard);
-  nextBtn.addEventListener('click', nextCard);
-
-  createDots();
-  updateCarousel();
+  glassBox.addEventListener('touchmove', (e) => {
+    const x = e.touches[0].pageX - glassBox.offsetLeft;
+    const walk = (x - startX) * 2;
+    glassBox.scrollLeft = scrollLeft - walk;
+  });
 });
