@@ -65,11 +65,60 @@
   border: none;
   border-top: 1px solid #124170;
 }
+/* Jello button */
+.btn-6 {
+  text-decoration: none; /* removes underline */
+  scale: 1;
+  position: relative;
+  width: 120px;
+  height: 30px;
+  border-radius: 32px;
+  border: none;
+  background-color: #001933;
+  font-family: inherit;
+  font-size: 14px;
+  color: #DDF4E7;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
 
-.cta-text {
-  color: #124170;
-  font-size: 1rem;
-  white-space: nowrap;
+.btn-6:hover {
+  animation: jello-horizontal 0.9s both;
+  background-color: #DDF4E7;
+  color: #001933;
+}
+
+.btn-6:link,
+.btn-6:visited,
+.btn-6:hover,
+.btn-6:active {
+  text-decoration: none; /* ensures no underline in all states */
+}
+
+@keyframes jello-horizontal {
+  0% { transform: scale3d(1, 1, 1); }
+  30% { transform: scale3d(1.25, 0.75, 1); }
+  40% { transform: scale3d(0.75, 1.25, 1); }
+  50% { transform: scale3d(1.15, 0.85, 1); }
+  65% { transform: scale3d(0.95, 1.05, 1); }
+  75% { transform: scale3d(1.05, 0.95, 1); }
+  100% { transform: scale3d(1, 1, 1); }
+}
+
+
+/* Optional: spacing from hr */
+.separator {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.separator hr {
+  flex: 1;
+  border: 1px solid #DDF4E7;
 }
 
 /* Contact buttons */
@@ -77,25 +126,50 @@
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  justify-content: flex-start; /* default for desktop */
+  justify-content: flex-start;
 }
 
+/* Base button styling */
 .contact-btn {
-  background: #67C090;
+  position: relative; /* Needed for pseudo-element animation */
+  display: inline-block;
+  background: #001933;
   color: #DDF4E7;
   padding: 0.7rem 1.5rem;
   border-radius: 2rem;
   text-align: center;
   width: 200px;
   text-decoration: none;
-  transition: background 0.3s;
-  border: 2px solid #67C090;
+  font-weight: bold;
+  overflow: hidden; /* hide animation outside */
+  border: 2px solid #001933;
+  transition: color 0.3s, background 0.3s;
+  z-index: 1;
 }
 
-.contact-btn:hover {
-  background: #DDF4E7;
-  color: #67C090;
+/* Hover effect */
+.contact-btn.btn-animated:hover {
+  color: #001933;
 }
+
+/* Skewed overlay animation */
+.contact-btn.btn-animated::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -20%;
+  right: -20%;
+  background: #DDF4E7;
+  z-index: -1;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: transform 0.5s;
+}
+
+.contact-btn.btn-animated:hover::after {
+  transform: skewX(-45deg) scale(1, 1);
+}
+
 
 /* Footer */
 .lets-footer {
@@ -109,12 +183,12 @@
 .social-icons a {
   color: #DDF4E7;
   margin-left: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   transition: color 0.3s;
 }
 
 .social-icons a:hover {
-  color: #67C090;
+  color: #001933;
 }
 
 /* Responsive Styles */
@@ -188,5 +262,6 @@
   .contact-btn {
     width: 180px;
     padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
   }
 }

@@ -6,13 +6,18 @@ const menuIcon = document.querySelector('.menu-icon');
 const navLinks = document.querySelector('.nav-links'); 
 menuIcon.addEventListener('click', () => { navLinks.classList.toggle('active'); });
 
+// -----------------------------
+// Determine API URL dynamically
+// -----------------------------
+const API_URL = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost"
+    ? "http://127.0.0.1:8000/chat"
+    : "https://portfolio-56h0.onrender.com/chat";  // <-- Replace with your Render URL if different
+
 sendBtn.addEventListener("click", async () => {
     const message = userInput.value.trim();
     if (!message) return;
 
-    // -----------------------------
     // 1️⃣ Append User Message
-    // -----------------------------
     const userMessage = document.createElement("div");
     userMessage.classList.add("message-row", "user-row");
     userMessage.innerHTML = `
@@ -25,11 +30,9 @@ sendBtn.addEventListener("click", async () => {
     chatMessages.scrollTop = chatMessages.scrollHeight;
     userInput.value = "";
 
-    // -----------------------------
     // 2️⃣ Send message to API
-    // -----------------------------
     try {
-        const response = await fetch("http://127.0.0.1:8000/chat", {
+        const response = await fetch(API_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ question: message })
@@ -37,9 +40,7 @@ sendBtn.addEventListener("click", async () => {
 
         const data = await response.json();
 
-        // -----------------------------
         // 3️⃣ Append Bot Message
-        // -----------------------------
         const botMessage = document.createElement("div");
         botMessage.classList.add("message-row", "bot-row");
         botMessage.innerHTML = `
@@ -56,7 +57,7 @@ sendBtn.addEventListener("click", async () => {
     }
 });
 
-// Allow sending message with Enter key
+// Send with Enter key
 userInput.addEventListener("keypress", (e) => {
     if (e.key === "Enter") {
         sendBtn.click();

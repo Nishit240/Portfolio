@@ -194,7 +194,7 @@ body {
 /* ================= Responsive ================= */
 @media screen and (max-width: 1024px) {
   .contact-section {
-    padding: 90px 60px 40px 60px;
+    padding: 90px 30px 40px 30px;
   }
   .header h1 {
     font-size: 2.8rem;
@@ -207,10 +207,10 @@ body {
 
 @media screen and (max-width: 580px) {
   .contact-section {
-    padding: 120px 60px 40px 60px;
+    padding: 120px 30px 40px 30px;
   }
   .header h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   .chat-container {
     height: 500px;
