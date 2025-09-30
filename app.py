@@ -9,7 +9,7 @@ import uvicorn
 # -------------------------
 # Load Dataset
 # -------------------------
-with open("python/qa_dat.json", "r", encoding="utf-8") as f:
+with open("qa_dat.json", "r", encoding="utf-8") as f:
     qa_data = json.load(f)
 
 questions = [item["question"].lower() for item in qa_data]  # convert to lowercase for better matching
@@ -100,3 +100,4 @@ def chat(query: Query):
 # -------------------------
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8000)
+
