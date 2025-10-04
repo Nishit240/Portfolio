@@ -10,7 +10,9 @@ import os
 # -------------------------
 # Load Dataset
 # -------------------------
-DATA_PATH = os.path.join("python", "qa_dat.json")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_PATH = os.path.join(BASE_DIR, "data", "qa_dat.json")
+
 with open(DATA_PATH, "r", encoding="utf-8") as f:
     qa_data = json.load(f)
 
@@ -103,3 +105,4 @@ def chat(query: Query):
 # -------------------------
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8000)
+
