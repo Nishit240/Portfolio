@@ -1,9 +1,12 @@
-
+html, body {
+  scroll-behavior: smooth;
+  padding-bottom: env(safe-area-inset-bottom); /* ensures content visible above home indicator */
+}
 
 .lets-work-section {
   background: linear-gradient(360deg, #124170, #67C090);
   color: #DDF4E7;
-  padding: 3rem 2rem;
+  padding: 3rem 2rem 3rem 2rem;
 }
 
 /* Top bar with avatar and hamburger */
@@ -22,8 +25,9 @@
 }
 
 .avatar {
-  width: 70px;
-  height: 100px;
+  z-index: 10;
+  width: 200px;
+  height: 300px;
   /* border-radius: 50%;
   background: #DDF4E7; */
   object-fit: cover;
@@ -43,13 +47,6 @@
   justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
-}
-
-.arrow {
-  font-size: 2rem;
-  color: #DDF4E7;
-  margin-right: 4rem;
-  margin-left: auto;
 }
 
 /* Separator line + CTA text */
@@ -196,22 +193,16 @@
   .lets-heading {
     font-size: 2.5rem;
   }
-
-  .arrow {
-    font-size: 1.8rem;
-  }
 }
 
 @media (max-width: 768px) {
+  .lets-work-section {
+  padding: 3rem 2rem 5rem 2rem;
+  }
   .lets-heading {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
-  }
-
-  .arrow {
-    margin-left: 0;
-    align-self: flex-end; /* keep arrow on right */
   }
 
   /* Contact buttons centered on mobile */
@@ -237,31 +228,34 @@
   }
 }
 
+/* Mobile Devices (<=480px) */
 @media (max-width: 480px) {
+  .lets-work-section {
+  padding: 3rem 1.5rem 7rem 1.5rem;
+  }
+
   .lets-heading {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
-  .arrow {
-    font-size: 1.5rem;
-  }
-
-  .cta-text {
-    font-size: 0.9rem;
-  }
-
-  .lets-footer {
-    gap: 0.8rem;
-  }
-
-  /* Make contact buttons smaller for very small screens */
-  .contact-buttons {
-    gap: 0.4rem;
+  .avatar {
+    width: 120px;
+    height: 170px;
   }
 
   .contact-btn {
-    width: 180px;
+    min-width: 180px;
+    font-size: 0.9rem;
     padding: 0.6rem 1.2rem;
-    font-size: 0.8rem;
+  }
+
+  .btn-6 {
+    width: 130px;
+    height: 35px;
+    font-size: 0.85rem;
+  }
+
+  .social-icons a {
+    font-size: 1.5rem;
   }
 }

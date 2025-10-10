@@ -10,26 +10,47 @@
     <link rel="stylesheet" href="index_css/home.css">
     <link rel="stylesheet" href="index_css/about.css">
     <link rel="stylesheet" href="index_css/skills.css">
-    <link rel="stylesheet" href="index_css/project.css">
     <link rel="stylesheet" href="index_css/contact.css">
+    <link rel="stylesheet" href="index_css/project.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      overflow-x: hidden;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+  </style>
 </head>
 <body>
-
-    <!-- Navbar / Taskbar -->
-    <nav class="navbar">
+  <canvas></canvas>
+  
+  <!-- Navbar / Taskbar -->
+  <nav class="navbar">
         <h1 class="logo">Portfolio</h1>
         <img src="image/bullet-point.png" class="menu-icon" alt="Menu">
-
+        
         <ul class="nav-links">
-            <li><a href="https://nishitjainportfolio.netlify.app/">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="https://nishitjainportfolio.netlify.app/contact">Contact</a></li>
+          <li><a href="https://nishitjainportfolio.netlify.app/">Home</a></li>
+          <!-- <li><a href="index.html">Home</a></li> -->
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <!-- <li><a href="contact.html">Contact</a></li> -->
+          <li><a href="https://nishitjainportfolio.netlify.app/contact">Contact</a></li>
         </ul>
-    </nav>
-
+      </nav>
+      
 <!-- Hero Section -->
 <section id="home" class="hero-section">
   <div class="hero-container">
@@ -208,11 +229,11 @@
         <div class="service-card" style="background-color:#5e9bc8;" data-name="VS Code">
           <img src="icons/vs-code.png" alt="VS Code" class="skill-icon">
         </div>
-        <div class="service-card" style="background-color:#6b57b3;" data-name="Pandas">
-          <img src="icons/pandas.png" alt="Pandas" class="skill-icon">
-        </div>
         <div class="service-card" style="background-color:#1b5265;" data-name="NumPy">
           <img src="icons/numpy.png" alt="NumPy" class="skill-icon">
+        </div>
+        <div class="service-card" style="background-color:#6b57b3;" data-name="Pandas">
+          <img src="icons/pandas.png" alt="Pandas" class="skill-icon">
         </div>
         <div class="service-card" style="background-color:#dedbdb;" data-name="OpenCV">
           <img src="icons/opencv.png" alt="OpenCV" class="skill-icon">
@@ -234,13 +255,9 @@
   </div>
 </section>
 
-
-
 <section class="projects-section" id="projects">
   <div class="projects-header">
-    <h2 class="about-heading">My Projects</h2>
-
-
+    <h1 class="projects-title">My Projects</h1>
     <p class="projects-subtitle">
       Discover the projects that showcase my passion for design and innovation
     </p>
@@ -263,7 +280,7 @@
         <p class="project-desc">
           An AI-powered attendance system that uses real-time face detection and recognition to automatically mark and record attendance.
         </p>
-        <p class="project-languages"><b>Languages :</b> Python, OpenCV, Tkinter, MySQL, ML</p>
+        <p class="project-languages"><b>Languages:</b> Python, OpenCV, Tkinter, MySQL, ML</p>
       </div>
     </div>
 
@@ -276,53 +293,17 @@
         <h3 class="project-title">
           Sales Insights Data Analysis 
           <a href="https://github.com/Nishit240/sales-insights-data-analysis-project.git" target="_blank" class="project-tag">
-            Github
+            GitHub
           </a>
         </h3>
         <p class="project-desc">
-          Power BI dashboard providing real-time sales and market performance insights
+          Power BI dashboard providing real-time sales and market performance insights.
         </p>
-        <p class="project-languages"><b>Languages :</b> Python, Power BI, Pandas.</p>
+        <p class="project-languages"><b>Languages:</b> Python, Power BI, Pandas</p>
       </div>
     </div>
 
     <!-- Project Card 3 -->
-    <div class="project-card">
-      <div class="project-img-area">
-        <img src="image/alex.png" alt="ALEX">
-      </div>
-      <div class="project-info-area">
-        <h3 class="project-title">
-          Voice Assistant – ALEX 
-          <a href="https://github.com/Nishit240/Voice-Assistant---ALEX.git" target="_blank" class="project-tag">
-            Github
-          </a>
-        </h3>
-        <p class="project-desc">
-           Alex is an intelligent Python voice assistant that interacts through voice commands and performs tasks to help users seamlessly. 
-        </p>
-        <p class="project-languages"><b>Languages :</b> Python, Speech Recognition, Pyttsx3</p>
-      </div>
-    </div>
-
-    <!-- Project Card 4 -->
-    <div class="project-card">
-      <div class="project-img-area">
-        <img src="image/vita.png" alt="VITA">
-      </div>
-      <div class="project-info-area">
-        <h3 class="project-title">
-          MlL Chatbot – VITA  
-          <a href="https://github.com/YourRepoProject4" target="_blank" class="project-tag">
-            Github
-          </a>
-        </h3>
-        <p class="project-desc">Vita is a simple chatbot, where users can interact with the bot, ask FAQs, and even solve math problems.</p>
-        <p class="project-languages"><b>Languages :</b> Python, Tkinter, ML</p>
-      </div>
-    </div>
-
-    <!-- Project Card 5 -->
     <div class="project-card">
       <div class="project-img-area">
         <img src="image/pf.png" alt="Portfolio">
@@ -330,72 +311,32 @@
       <div class="project-info-area">
         <h3 class="project-title">
           Portfolio 
+          <a href="https://github.com/YourRepoProject4" target="_blank" class="project-tag">
+            GitHub
+          </a>
           <a href="https://nishitjainportfolio.netlify.app/" target="_blank" class="project-tag">
-            Link
+            Live
           </a>
         </h3>
-        <p class="project-desc">Brief description of project 5.</p>
-        <p class="project-languages"><b>Languages :</b> HTML, CSS, JavaScript</p>
+        <p class="project-desc">
+          Personal portfolio showcasing projects, skills, and experience in web development.
+        </p>
+        <p class="project-languages"><b>Languages:</b> HTML, CSS, JavaScript</p>
       </div>
     </div>
 
-    <!-- Project Card 6 -->
-    <div class="project-card">
-      <div class="project-img-area">
-        <img src="image/pc.png" alt="Pulse Care">
-      </div>
-      <div class="project-info-area">
-        <h3 class="project-title">
-           Pulse Care 
-          <a href="https://github.com/Nishit240/PULSE-CARE.git" target="_blank" class="project-tag">
-            Github
-          </a>
-        </h3>
-        <p class="project-desc">Web platform for managing doctor appointments, prescriptions, and admin access. </p>
-        <p class="project-languages"><b>Languages :</b> HTML, CSS, JavaScript, MySQL, PHP</p>
-      </div>
-    </div>
+  </div>
 
-    <!-- Project Card 7 -->
-    <!-- <div class="project-card">
-      <div class="project-img-area">
-        <img src="image/project7.png" alt="The-Perfect-Guess ">
-      </div>
-      <div class="project-info-area">
-        <h3 class="project-title">
-          The-Perfect-Guess 
-          <a href="https://github.com/Nishit240/The-Perfect-Guess.git" target="_blank" class="project-tag">
-            Github
-          </a>
-        </h3>
-        <p class="project-desc">An interactive guessing game,combining logic, Object-Oriented Programming and fun problem-solving skills</p>
-        <p class="project-languages"><b>Languages :</b> Python, </p>
-      </div>
-    </div> -->
-
-    <!-- Project Card 8 -->
-    <!-- <div class="project-card">
-      <div class="project-img-area">
-        <img src="image/project8.png" alt="Project 8">
-      </div>
-      <div class="project-info-area">
-        <h3 class="project-title">
-          Project 8 
-          <a href="https://github.com/YourRepoProject8" target="_blank" class="project-tag">
-            Github
-          </a>
-        </h3>
-        <p class="project-desc">Brief description of project 8. Brief description of project 8. Brief description of project 8. Brief description of project 8.</p>
-        <p class="project-languages"><b>Languages :</b> HTML, CSS, JS</p>
-      </div>
-    </div> -->
+  <div class="projects-footer">
+    <a href="https://nishitjainportfolio.netlify.app/project" class="see-more-btn">See More Projects</a>
   </div>
 </section>
+
 
 <section class="lets-work-section">
 
   <!-- Top Bar -->
-  <div class="lets-top-bar", id="contact" >
+  <div class="lets-top-bar" id="contact" >
     <div class="avatar-text">
       <img src="image/1.png" alt="User Avatar" class="avatar">
       <h1 class="lets-heading">Let's work together..<br> </h1>
@@ -431,10 +372,10 @@
 </section>
 
 
+<script src="js/background.js"></script>
 <script src="js/script.js"></script>
 <script src="js/script1.js"></script>
 <script src="js/script2.js"></script>
-
 
 </body> 
 </html>

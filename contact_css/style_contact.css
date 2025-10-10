@@ -56,12 +56,20 @@ body {
   font-size: 0.85rem;
   color: #333;
 }
+.email-pill:hover {
+  background: #001933;
+  color: #DDF4E7;
+}
 
 .social-icons i {
   margin-left: 10px;
-  color: #333;
+  color: #001933;
   cursor: pointer;
   font-size: 1.2rem;
+}
+
+.social-icons i:hover{
+  color: #1d77d0;
 }
 
 /* Chat Messages */
@@ -165,7 +173,7 @@ body {
   padding: 10px 20px;
   border: none;
   border-radius: 10px;
-  background: #67C090;
+  background: #001933;
   color: #DDF4E7;
   font-weight: bold;
   cursor: pointer;
@@ -173,7 +181,8 @@ body {
 }
 
 .chat-input button:hover {
-  background: #1a452e;
+  background: #1d77d0;
+  color: #DDF4E7;
 }
 
 /* ================= Scrollbar Styling ================= */
@@ -190,6 +199,16 @@ body {
   background: rgba(0,0,0,0.2);
   border-radius: 10px;
 }
+
+.social-icons a {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: #DDF4E7;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover { color: #001933; }
+
 
 /* ================= Responsive ================= */
 @media screen and (max-width: 1024px) {

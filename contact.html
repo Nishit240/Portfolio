@@ -2,25 +2,51 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio with Chatbot</title>
+    <title>Nishit Jain</title>
     <link rel="stylesheet" href="index_css/style.css"> <!-- your navbar + hero styles -->
     <link rel="stylesheet" href="contact_css/style_contact.css">   <!-- chatbot styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <meta charset="UTF-8">
+    <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      overflow-x: hidden;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* behind all content */
+      pointer-events: none; /* allow clicks through canvas */
+    }
+  </style>
 </head>
 <body>
-
+  <canvas></canvas>
 <!-- Navbar -->
 <nav class="navbar">
     <h1 class="logo">Portfolio</h1>
     <img src="image/bullet-point.png" class="menu-icon" alt="Menu">
-    <ul class="nav-links">
-        <li><a href="https://nishitjainportfolio.netlify.app/">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="https://nishitjainportfolio.netlify.app/contact">Contact</a></li>
-    </ul>
+        
+    <!-- <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul> -->
+
+        <ul class="nav-links">
+          <li><a href="https://nishitjainportfolio.netlify.app/">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="https://nishitjainportfolio.netlify.app/project">Projects</a></li>
+          <li><a href="https://nishitjainportfolio.netlify.app/contact">Contact</a></li>
+        </ul>
 </nav>
 
 <section class="contact-section">
@@ -69,9 +95,11 @@
 </section>
 
 <script src="js/contact.js"></script>
+<script src="js/script.js"></script>
+<script src="js/background.js"></script>
+
 <!-- <script src="js/chatbot.js"></script> -->
 
 
 </body>
 </html>
-

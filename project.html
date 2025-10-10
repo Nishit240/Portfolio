@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nishit Jain Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index_css/style.css">
+  <link rel="stylesheet" href="project_css/project.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      overflow-x: hidden;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* behind all content */
+      pointer-events: none; /* allow clicks through canvas */
+    }
+  </style>
+</head>
+<body>
+  <!-- Canvas for starfield -->
+  <canvas></canvas>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+      <h1 class="logo">Portfolio</h1>
+      <img src="image/bullet-point.png" class="menu-icon" alt="Menu">
+      <!-- <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul> -->
+        <ul class="nav-links">
+          <li><a href="https://nishitjainportfolio.netlify.app/">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="https://nishitjainportfolio.netlify.app/project">Projects</a></li>
+          <li><a href="https://nishitjainportfolio.netlify.app/contact">Contact</a></li>
+        </ul>
+  </nav>
+
+  <!-- Projects Section -->
+  <section class="projects-tab-section" id="projects">
+    <h2 class="section-title">My Projects</h2>
+    <p class="projects-subtitle">Discover the projects that showcase my passion for design and innovation</p>
+    <div class="tab-buttons">
+      <button class="tab active" data-cat="all" onclick="showTab('all', this)">ALL</button>
+      <button class="tab" data-cat="python" onclick="showTab('python', this)">Python</button>
+      <button class="tab" data-cat="ml" onclick="showTab('ml', this)">Machine Learning</button>
+      <button class="tab" data-cat="web" onclick="showTab('web', this)">Web Projects</button>
+      <button class="tab" data-cat="data" onclick="showTab('data', this)">Data Analysis</button>
+    </div>
+
+  <div class="projects-grid">
+
+    <!-- FaceTrack -->
+    <div class="project-card" data-category="ml">
+      <div class="project-img-area">
+        <img src="image/ft.png" alt="FaceTrack">
+      </div>
+      <div class="project-info-area">
+        <h3 class="project-title">
+          FaceTrack 
+          <a href="https://github.com/Nishit240/FaceTrack.git" target="_blank" class="project-tag">GitHub</a>
+        </h3>
+        <p class="project-desc">An AI-powered attendance system using face detection and recognition.</p>
+        <p class="project-languages"><b>Languages :</b> Python, OpenCV, Tkinter, MySQL, ML</p>
+      </div>
+    </div>
+
+    <!-- Sales Insights -->
+    <div class="project-card" data-category="data">
+      <div class="project-img-area">
+        <img src="image/Sales Insights.png" alt="Sales Insights">
+      </div>
+      <div class="project-info-area">
+        <h3 class="project-title">
+          Sales Insights Data Analysis 
+          <a href="https://github.com/Nishit240/sales-insights-data-analysis-project.git" target="_blank" class="project-tag">GitHub</a>
+        </h3>
+        <p class="project-desc">Power BI dashboard providing real-time sales insights.</p>
+        <p class="project-languages"><b>Languages :</b> Python, Power BI, Pandas</p>
+      </div>
+    </div>
+
+    <!-- ALEX -->
+    <div class="project-card" data-category="python">
+      <div class="project-img-area">
+        <img src="image/alex.png" alt="ALEX">
+      </div>
+      <div class="project-info-area">
+        <h3 class="project-title">
+          Voice Assistant – ALEX 
+          <a href="https://github.com/Nishit240/Voice-Assistant---ALEX.git" target="_blank" class="project-tag">GitHub</a>
+        </h3>
+        <p class="project-desc">Voice-controlled assistant built in Python.</p>
+        <p class="project-languages"><b>Languages :</b> Python, Speech Recognition, Pyttsx3</p>
+      </div>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="project-card" data-category="ml">
+      <div class="project-img-area">
+        <img src="image/vita.png" alt="VITA">
+      </div>
+      <div class="project-info-area">
+        <h3 class="project-title">
+          ML Chatbot – VITA  
+          <a href="https://github.com/YourRepoProject4" target="_blank" class="project-tag">GitHub</a>
+        </h3>
+        <p class="project-desc">Interactive chatbot that handles FAQs and logic-based responses.</p>
+        <p class="project-languages"><b>Languages :</b> Python, Tkinter, ML</p>
+      </div>
+    </div>
+
+    <!-- Portfolio -->
+    <div class="project-card" data-category="web">
+      <div class="project-img-area">
+        <img src="image/pf.png" alt="Portfolio">
+      </div>
+      <div class="project-info-area">
+        <h3 class="project-title">
+          Portfolio 
+          <a href="https://github.com/YourRepoProject4" target="_blank" class="project-tag">GitHub</a>
+          <a href="https://nishitjainportfolio.netlify.app/" target="_blank" class="project-tag">Live</a>
+        </h3>
+        <p class="project-desc">Personal portfolio showcasing my projects and experience.</p>
+        <p class="project-languages"><b>Languages :</b> HTML, CSS, JavaScript</p>
+      </div>
+    </div>
+
+    <!-- Pulse Care -->
+    <div class="project-card" data-category="web">
+      <div class="project-img-area">
+        <img src="image/pc.png" alt="Pulse Care">
+      </div>
+      <div class="project-info-area">
+        <h3 class="project-title">
+           Pulse Care 
+          <a href="https://github.com/Nishit240/PULSE-CARE.git" target="_blank" class="project-tag">GitHub</a>
+        </h3>
+        <p class="project-desc">Healthcare platform managing appointments and prescriptions.</p>
+        <p class="project-languages"><b>Languages :</b> HTML, CSS, JavaScript, PHP, MySQL</p>
+      </div>
+    </div>
+
+    <!-- The Perfect Guess -->
+    <div class="project-card" data-category="python">
+      <div class="project-img-area">
+        <img src="image/project7.png" alt="The Perfect Guess">
+      </div>
+      <div class="project-info-area">
+        <h3 class="project-title">
+          The Perfect Guess 
+          <a href="https://github.com/Nishit240/The-Perfect-Guess.git" target="_blank" class="project-tag">GitHub</a>
+        </h3>
+        <p class="project-desc">A fun Python guessing game combining logic and randomness.</p>
+        <p class="project-languages"><b>Languages :</b> Python</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <script src="js/script.js"></script>
+  <script src="js/project.js"></script>
+  <script src="js/background.js"></script>
+</body>
+</html>
