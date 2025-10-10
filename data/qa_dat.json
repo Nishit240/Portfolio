@@ -9,6 +9,7 @@
   {"question": "your name", "answer": "I am Vita, Nishit's personal chatbot assistant. 🤗"},
   {"question": "who created you", "answer": "I was created by Nishit using Python, FastAPI, and Machine Learning. 🧑‍💻"},
   {"question": "projects", "answer": "Here are some of my projects you can explore:\n1️⃣ FaceTrack Attendance System\n2️⃣ Sales Insights\n3️⃣ ALEX\n4️⃣ VITA\n5️⃣ Portfolio Project\n6️⃣ Pulse Care\n7️⃣ The Perfect Guess"},
+   {"question": "about projects", "answer": "Here are some of my projects you can explore:\n1️⃣ FaceTrack Attendance System\n2️⃣ Sales Insights\n3️⃣ ALEX\n4️⃣ VITA\n5️⃣ Portfolio Project\n6️⃣ Pulse Care\n7️⃣ The Perfect Guess"},
   {"question": "contact info", "answer": "You can reach out via email at nishitjain02419@gmail.com 📧 or find me on social media platforms."},
   {"question": "portfolio", "answer": "This portfolio showcases my skills in Web Development, AI, and Full Stack Projects. 🚀✨"},
   {"question": "good morning", "answer": "Good morning! Hope your day is full of energy and success! ☀️🌸"},

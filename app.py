@@ -85,10 +85,10 @@ def chat(query: Query):
     if confidence < 0.1:
         best_answer = (
             "I'm not sure about that. You can ask me things like:<br>"
+            "- About my projects<br>"
             "- Hello / Hi<br>"
             "- What is your name?<br>"
             "- Who created you?<br>"
-            "- What services do you offer?<br>"
             "- How can I contact you?<br>"
             "- What are your working hours?<br>"
             "- Tell me about AI<br>"
