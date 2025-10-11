@@ -20,8 +20,6 @@ body {
   z-index: -1; /* behind the text */
 }
 
-
-
 /* Section title and subtitle */
 .section-title {
   font-size: 2.2rem;
@@ -76,7 +74,8 @@ body {
 /* === Project Card === */
 .project-card {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1000px;
+  height: auto;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
@@ -86,7 +85,6 @@ body {
 
 .project-card:hover {
   filter: brightness(1.15);
-  transform: translateY(-10px);
 }
 
 /* Image area */
@@ -103,10 +101,6 @@ body {
   transition: transform 0.3s ease;
 }
 
-.project-card:hover img {
-  transform: scale(1.05);
-}
-
 /* Info area */
 .project-info-area {
   background: #124170;
@@ -116,9 +110,11 @@ body {
 
 .project-title {
   color: #DDF4E7;
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+
 }
 
 .project-tag {
@@ -151,23 +147,6 @@ body {
   color: #DDF4E7;
 }
 
-/* See More Button */
-.see-more-btn {
-  margin-top: 2rem;
-  display: inline-block;
-  background: #124170;
-  color: #DDF4E7;
-  padding: 0.8rem 1.6rem;
-  border-radius: 2rem;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: background 0.3s, color 0.3s;
-}
-
-.see-more-btn:hover {
-  background: #DDF4E7;
-  color: #124170;
-}
 
 /* === Responsive Breakpoints === */
 @media (max-width: 1024px) {

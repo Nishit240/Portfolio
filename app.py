@@ -67,14 +67,14 @@ def chat(query: Query):
     user_input = query.question.strip()
     
     if not user_input:
-        return {"answer": "Please type something so I can assist you! ✨", "confidence": 1.0}
+        return {"answer": "Please type something so I can assist you! ✨"}
 
     if is_math_expression(user_input):
         try:
             result = eval(user_input)
-            return {"answer": f"The result is: {result}", "confidence": 1.0}
+            return {"answer": f"The result is: {result}"}
         except Exception:
-            return {"answer": "Sorry, I couldn't evaluate that expression.", "confidence": 1.0}
+            return {"answer": "Sorry, I couldn't evaluate that expression."}
 
     user_vec = vectorizer.transform([user_input.lower()])
     similarity = cosine_similarity(user_vec, X)
@@ -89,11 +89,10 @@ def chat(query: Query):
             "- Hello / Hi<br>"
             "- What is your name?<br>"
             "- Who created you?<br>"
-            "- How can I contact you?<br>"
             "- What are your working hours?<br>"
-            "- Tell me about AI<br>"
             "- Tell me a joke<br>"
             "- Use me as a Calculator<br>"
+            "- My favorite technology<br>"
             "- Bye / Quit"
         )
 
