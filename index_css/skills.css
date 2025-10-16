@@ -143,7 +143,7 @@
 ========================== */
 .services-vertical-nav {
   position: absolute;
-  right: 1rem;
+  right: 2rem;
   top: 11%;
   display: flex;
   flex-direction: column;
@@ -154,19 +154,58 @@
 }
 
 .services-vertical-nav button {
-  background: #001933;
-  color: #DDF4E7;
   border: none;
   border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3.3rem;
+  height: 3.3rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
 
-.services-vertical-nav button:hover {
-  background: #DDF4E7;
-  color: #1e5165;
+/* Charmander button */
+.services-vertical-nav button.up {
+  background: #FF6F31; /* orange-red */
+  color: #DDF4E7;
 }
+
+.services-vertical-nav button.up:hover {
+  background: #FFD1A3; /* lighter orange */
+}
+
+/* Squirtle button */
+.services-vertical-nav button.down {
+  background: #4DA6FF; /* blue */
+  color: #DDF4E7;
+}
+
+.services-vertical-nav button.down:hover {
+  background: #A3D1FF; /* lighter blue */
+}
+
+.services-vertical-nav button img {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.services-vertical-nav button:hover img {
+  transform: scale(1.7);
+}
+
+/* Optional bounce animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+
 
 /* ==========================
    Responsive Cards
@@ -182,9 +221,9 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 460px) {
   .services-section {
-    padding: 3rem 1rem;
+    padding: 7rem 1rem;
   }
 
   .services-header h2 {
@@ -228,7 +267,7 @@
     width: 18px;
   }
 
-  .services-vertical-nav {
+  /* .services-vertical-nav {
     top: 2%;
     right: 0.5rem;
     gap: 0.5rem;
@@ -237,5 +276,21 @@
   .services-vertical-nav button {
     width: 2rem;
     height: 2rem;
+  } */
+
+    .services-vertical-nav {
+    position: absolute;
+    bottom: 1rem;
+    right: 50%;
+    transform: translateX(50%);
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    animation: none; /* optional: stop bouncing on small screens */
+  }
+
+  .services-vertical-nav button {
+    width: 3.3rem;
+    height: 3.3rem;
   }
 }

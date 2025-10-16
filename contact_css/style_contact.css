@@ -15,7 +15,7 @@ body {
 
 /* Header */
 .header h1 {
-  font-size: 1.8rem;
+  font-size: 40px;
   font-weight: bold;
   color: #DDF4E7;
   margin: 0;
@@ -135,6 +135,7 @@ body {
   color: #000000;
   align-self: flex-start;
   background: linear-gradient(180deg, #67C090, #437c5e);
+  background: linear-gradient(180deg, #90c8ff, #1d77d0);
 
 }
 
@@ -145,9 +146,8 @@ body {
 }
 
 .message.user {
-  background: linear-gradient(180deg, #124170, #1d77d0);
-  background-color: #26667F;
-  color: #DDF4E7;
+  background: linear-gradient(180deg, #ffb000, #fff800);  
+  color: black;
   align-self: flex-end;
 }
 
@@ -173,16 +173,16 @@ body {
   padding: 10px 20px;
   border: none;
   border-radius: 10px;
-  background: #001933;
-  color: #DDF4E7;
+  background: #1d77d0;
+  color: #001933;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .chat-input button:hover {
-  background: #1d77d0;
-  color: #DDF4E7;
+  background: #90c8ff;
+  color: #001933;
 }
 
 /* ================= Scrollbar Styling ================= */
@@ -220,7 +220,7 @@ body {
   }
   .chat-container {
     max-width: 700px;
-    height: 380px;
+    height: 480px;
   }
 }
 

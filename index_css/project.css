@@ -43,13 +43,15 @@
   border-radius: 1rem;
   overflow: hidden;
   background: #124170;
-  box-shadow: 0 60px 100px rgba(0, 0, 0, 0.4);
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-8px);
-  filter: brightness(1.15);
+  filter: brightness(1.25);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
+
 }
 
 /* 🖼️ Image Area */
@@ -121,27 +123,48 @@
 .projects-footer {
   margin-top: 3rem;
   text-align: center;
+  z-index: 10;
 }
 
 .see-more-btn {
   display: inline-block;
+  position: relative;
+  overflow: hidden;
   background: #001933;
   color: #DDF4E7;
-  
   padding: 0.9rem 1.8rem;
   border-radius: 2rem;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
+  z-index: 1;
+  border: 2px solid #001933;
+
+}
+
+.see-more-btn::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #DDF4E7;
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+
+.see-more-btn:hover::before {
+  top: 0;
 }
 
 .see-more-btn:hover {
   border: 2px solid #001933;
-  background: #DDF4E7;
   color: #001933;
-  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 25, 51, 0.25);
 }
+
 
 /* 📱 Responsive Design */
 

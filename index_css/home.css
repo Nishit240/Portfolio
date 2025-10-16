@@ -75,7 +75,6 @@
   gap: 1rem;
   margin-bottom: 1.5rem;
 }
-
 .btn {
   padding: 0.8rem 1.5rem;
   border-radius: 2rem;
@@ -85,6 +84,7 @@
 }
 
 .btn-outline {
+  position: relative;
   width: 110px;
   border: 2px solid #001933;
   background: transparent;
@@ -92,16 +92,38 @@
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center; /* ✅ centers text horizontally */
+  justify-content: center;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s ease;
+  z-index: 1;
 }
 
-.btn-outline:hover {
-  transform: translateY(-10px);
+/* Sliding background layer */
+.btn-outline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
   background: #DDF4E7;
-  color: #001933;
-  border: 2px solid #001933;
+  z-index: -1;
+  transition: all 0.4s ease;
 }
 
+/* On hover, background slides in */
+.btn-outline:hover::before {
+  left: 0;
+}
+
+/* Text color changes when background fills */
+.btn-outline:hover {
+  color: #001933;
+  border-color: #001933;
+}
 
 
 /* New Download Button */

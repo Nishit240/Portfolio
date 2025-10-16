@@ -1,48 +1,46 @@
-body {
-  font-family: 'Arial', sans-serif;
+/* ================= Projects Section (Matching Contact) ================= */
+.projects-tab-section {
+  padding: 90px 110px 30px 110px; /* same as contact-section */
+  min-height: 89vh;
+  position: relative;
   background: linear-gradient(180deg, #124170, #67C090);
   color: #DDF4E7;
 }
 
-.projects-tab-section {
-  padding: 3rem 1.5rem;
-  text-align: center;
+/* Header */
+.projects-tab-section .header h1 {
+  font-size: 40px;
+  font-weight: bold;
   color: #DDF4E7;
-  background: transparent ; /* make it fully transparent */
-}
-.projects-tab-section::before {
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(65, 137, 208, 0.5); /* optional overlay */
-  z-index: -1; /* behind the text */
+  margin: 0;
 }
 
-/* Section title and subtitle */
-.section-title {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
+.projects-tab-section .header hr {
+  margin: 10px 0 30px;
+  border: 1px solid #DDF4E7;
 }
 
-.projects-subtitle {
+/* Subtitle */
+.projects-tab-section .projects-subtitle {
   font-size: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   color: #DDF4E7;
 }
 
-/* === Tabs === */
+/* Tabs */
 .tab-buttons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.7rem;
-  margin: 2rem;
-
+  margin: 2rem 0;
 }
 
 .tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* space between icon and text */
   padding: 0.5rem 1.2rem;
   border-radius: 30px;
   background: transparent;
@@ -54,16 +52,31 @@ body {
   font-size: 15px;
 }
 
-.tab:hover { transform: translateY(-2px); }
+.tab-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.tab:hover .tab-icon {
+  transform: scale(1.5); /* subtle hover animation */
+}
+
+.tab:hover {
+  transform: translateY(-2px);
+}
 
 .tab.active {
   background: #124170;
   color: #67C090;
   border: 1px solid #67C090;
-  box-shadow: 0 4px 10px rgba(103, 192, 144, 0.12);
+  box-shadow: 6px 6px 6px rgba(47, 255, 144, 0.12);
 }
 
-/* === Projects Grid === */
+/* Projects Grid */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -71,11 +84,10 @@ body {
   justify-items: center;
 }
 
-/* === Project Card === */
+/* Project Card */
 .project-card {
   width: 100%;
   max-width: 1000px;
-  height: auto;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
@@ -112,9 +124,7 @@ body {
   color: #DDF4E7;
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-
+  margin: 0.5rem 0;
 }
 
 .project-tag {
@@ -147,64 +157,41 @@ body {
   color: #DDF4E7;
 }
 
-
-/* === Responsive Breakpoints === */
-@media (max-width: 1024px) {
-  .section-title {
-    font-size: 2rem;
+/* ================= Responsive Breakpoints (matching Contact section) ================= */
+@media screen and (max-width: 1024px) {
+  .projects-tab-section {
+    padding: 90px 30px 40px 30px; /* same as contact-section */
   }
-
+  .projects-tab-section .header h1 {
+    font-size: 2.8rem;
+  }
   .project-title {
     font-size: 1.3rem;
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 580px) {
   .projects-tab-section {
-    padding: 3.5rem 1rem;
+    padding: 120px 30px 40px 30px;
   }
-
-  .tab {
-    font-size: 0.9rem;
-    padding: 0.4rem 1rem;
+  .projects-tab-section .header h1 {
+    font-size: 1.6rem;
   }
-
-  .project-card {
-    max-width: 100%;
+  .chat-messages {
+    padding: 10px;
+    gap: 10px;
   }
-
-  .project-img-area img {
-    border-radius: 0.6rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .projects-subtitle {
-    font-size: 0.9rem;
-  }
-
   .project-title {
     font-size: 1.1rem;
   }
-
   .project-desc {
     font-size: 0.85rem;
   }
-
-  .projects-grid {
-    gap: 1.2rem;
-  }
-
   .tab-buttons {
     flex-direction: row;
+    gap: 0.5rem;
   }
-
-  .see-more-btn {
-    padding: 0.6rem 1.4rem;
-    font-size: 0.9rem;
+  .projects-grid {
+    gap: 1.2rem;
   }
 }

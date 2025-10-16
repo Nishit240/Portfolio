@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Nishit Jain Portfolio</title>
+  <title>Nishit Jain</title>
+  <link rel="icon" type="image/png" href="image/favicon_io (2)/android-chrome-192x192.png"> 
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index_css/style.css">
   <link rel="stylesheet" href="project_css/project.css">
@@ -50,16 +52,23 @@
 
   <!-- Projects Section -->
   <section class="projects-tab-section" id="projects">
-    <h2 class="section-title">My Projects</h2>
-    <p class="projects-subtitle">Discover the projects that showcase my passion for design and innovation</p>
+    <div class="header">
+      <h1>My Projects</h1>
+      <p class="projects-subtitle">Discover the projects that showcase my passion for design and innovation</p>
+      <hr>
+    </div>
 
     <div class="tab-buttons">
-      <button class="tab active" data-cat="all" onclick="showTab('all', this)">ALL</button>
+      <button class="tab active" data-cat="all" onclick="showTab('all', this)">
+        <img src="icons/bullbasaur.png" alt="Bulbasaur" class="tab-icon">
+        ALL
+      </button>
       <button class="tab" data-cat="python" onclick="showTab('python', this)">Python</button>
       <button class="tab" data-cat="ml" onclick="showTab('ml', this)">Machine Learning</button>
       <button class="tab" data-cat="web" onclick="showTab('web', this)">Web Projects</button>
       <button class="tab" data-cat="data" onclick="showTab('data', this)">Data Analysis</button>
     </div>
+
 
     <div class="projects-grid">
       <!-- FaceTrack -->
@@ -185,7 +194,7 @@
           <p class="project-languages"><b>Languages :</b> Python, OOPS, If-Else, PySide6</p>
         </div>
         <div class="project-img-area">
-          <img src="image/game.png" alt="Rock Paper Scissors">
+          <img src="image/Rock-Paper-Scissor.png" alt="Rock Paper Scissors">
         </div>
       </div>
 
